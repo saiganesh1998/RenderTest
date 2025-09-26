@@ -533,7 +533,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # -------------------- Load Excel --------------------
-EXCEL_FILE = "process info ai.xlsx"
+EXCEL_FILE = "Data/process info ai.xlsx"
 
 @st.cache_resource(show_spinner=False)
 def load_and_index_data():
@@ -640,3 +640,4 @@ st.markdown("""
     </div>
 
 """, unsafe_allow_html=True)
+
