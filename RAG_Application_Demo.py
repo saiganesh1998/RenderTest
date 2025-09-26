@@ -544,7 +544,9 @@ def load_and_index_data():
         return nn, X, docs, True, len(df)
     except Exception as e:
         return None, None, None, False, 0
-
+print("Current directory:", os.getcwd())
+print("Files here:", os.listdir("."))
+print("Files in data/:", os.listdir("data") if os.path.exists("data") else "No data folder")
 # Load data
 with st.spinner("⚙️ Initializing AI models and indexing data..."):
     nn, X, docs, data_loaded, num_records = load_and_index_data()
@@ -640,4 +642,5 @@ st.markdown("""
     </div>
 
 """, unsafe_allow_html=True)
+
 
